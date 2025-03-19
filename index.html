@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Audio Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+    body {
+        background-image: url(../Assets/image.png);
+        background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fixed background */
+}
+
+
+/* .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: right;
+    text-align: right;
+    margin-right: 20px;
+}
+     */
+     .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 0;
+ 
+    }
+
+.logo {
+    color: black;
+    font-size: 34px;
+    
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: pink;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: pink;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: rgb(161, 230, 233);
+    color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; 
+        gap: 10px;/* Stack links on smaller screens */
+    }
+
+    .nav-links li {
+        margin: 5px 0; /* Add margin for stacked links */
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0;
+ 
+    }
+
+}
+.section-intro{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 110px;
+}
+
+
+.audio-display-section {
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.audio-display-section h2 {
+    margin-bottom: 20px;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.audio-item {
+    margin: 10px;
+    width: 30%; /* Set width for three items in a row */
+    max-width: 300px; /* Limit the maximum width */
+}
+
+audio {
+    width: 100%; /* Make audio player responsive */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .audio-item {
+        width: 45%; /* Two items in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .audio-item {
+        width: 100%; /* One item in a row on very small screens */
+    }
+} 
+.btn{
+    padding: 10px;
+    width: 300px;
+    margin-top: 35px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar">
+         <div class="logo">TeenGirls</div> 
+         <div class="bar-nav">
+        <ul class="nav-links">
+            <li><a href="#home">Audio</a></li>
+            <li><a href="vidoes.html">Vidoes</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    </nav>
+    <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input">
+        <button class="search-button">Search</button>
+    </div>
+
+    <div class="section-intro">
+        <h2>Welcome to Our educational Platform for Young Women. <br>Discover Inspiring Vidoes 
+          And Empowering Audio Content <br>designed to support your growth and success.</h2>
+    </div>
+
+    <section class="audio-upload-section">
+        <section class="audio-display-section">
+            <div class="audio-container">
+                <div class="audio-item">
+                    <p>Chill Music</p>
+                    <audio controls>
+                        <source src="My-First-Audio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="audio-item">
+                    <p>Meditation Rythm</p>
+                    <audio controls>
+                        <source src="meditation.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="audio-item">
+                    <p>Exercise Beats</p>
+                    <audio controls>
+                        <source src="exercise.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <button class="btn">Listen to More</button>
+        </section>
+        
+    </section>
+
+
+
+    </script>
+</body>
+</html>
